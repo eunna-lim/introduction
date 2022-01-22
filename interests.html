@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+    <title>About Eunna</title>
+</head>
+<body>
+    <div class="main-img">
+        <header>
+            <h1><a href="index.html">Welcome! I'm Eunna :)</a></h1>
+            <input type="button" value="Dark" class="modeChangeBtn" onclick="
+                modeChange(this);
+            ">
+        </header>
+        <nav>
+            <ul>
+                <li><a href="goal.html">Goal</a></li>
+                <li><a href="tech.html">Tech</a></li>
+                <li><a href="expect.html">Expect</a></li>
+                <li><a href="to_racers.html">To Racers</a></li>
+                <li><a href="interests.html">Interests</a></li>
+            </ul>
+        </nav>
+        <div class = "paragraph">
+            <p>
+                취미는 음악 듣기(장르 가리지 않고 꽂히는 거 많이 듣습니다 헤헤)<br>
+                특기는 상대방 이야기 들어주기(저는 말하기보다 듣기를 좋아해요!)<br>
+                좋아하는 음료는 달다구리 음료라면 다(달달한 게 최고)<br>
+                좋아하는 동물은 우리집 고양이 그리(7살 러시안블루를 모시고 있습니다!)
+            </p>
+        </div>
+    </div>
+
+</body>
+<script>
+    function modeChange(self) {
+        let target = document.querySelector('body');
+        let as = document.querySelectorAll('a');
+        if (self.value == 'Dark') {
+            target.style.backgroundColor = '#7D869C';
+            target.style.color = '#FFFFFF';
+            as.forEach(a => a.style.color = '#FFFFFF');
+            self.value = 'Light';
+        } else {
+            target.style.backgroundColor = '#FFFFFF';
+            target.style.color = '#7D869C';
+            as.forEach(a => a.style.color = '#7D869C');
+            self.value = 'Dark';
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+    <title>About Eunna</title>
+</head>
+<body>
+    <div class="main-img">
+        <header>
+            <h1><a href="index.html">Welcome! I'm Eunna :)</a></h1>
+            <input type="button" value="Dark" class="modeChangeBtn" onclick="
+                modeChange(this);
+            ">
+        </header>
+        <nav>
+            <ul>
+                <li><a href="goal.html">Goal</a></li>
+                <li><a href="tech.html">Tech</a></li>
+                <li><a href="expect.html">Expect</a></li>
+                <li><a href="to_racers.html">To Racers</a></li>
+                <li><a href="interests.html">Interests</a></li>
+            </ul>
+        </nav>
+
+        <div class = "paragraph">
+            <p>
+                지금 관심있는 기술은 React를 활용하여 반응형 웹페이지를 만드는 것입니다.<br>
+                전공자이지만 웹 프로그래밍을 배우는 것은 처음이라 언어에 익숙해지지는 않았지만, <br>스터디와 수업을 통해서 열심히 익혀나갈 계획입니다.
+            </p>
+        </div>
+    </div>
+
+</body>
+<script>
+    function modeChange(self) {
+        let target = document.querySelector('body');
+        let as = document.querySelectorAll('a');
+        if (self.value == 'Dark') {
+            target.style.backgroundColor = '#7D869C';
+            target.style.color = '#FFFFFF';
+            as.forEach(a => a.style.color = '#FFFFFF');
+            self.value = 'Light';
+        } else {
+            target.style.backgroundColor = '#FFFFFF';
+            target.style.color = '#7D869C';
+            as.forEach(a => a.style.color = '#7D869C');
+            self.value = 'Dark';
+        }
+    }
+</script>
+</html>

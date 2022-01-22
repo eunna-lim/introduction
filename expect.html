@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+    <title>About Eunna</title>
+</head>
+<body>
+    <div class="main-img">
+        <header>
+            <h1><a href="index.html">Welcome! I'm Eunna :)</a></h1>
+            <input type="button" value="Dark" class="modeChangeBtn" onclick="
+                modeChange(this);
+            ">
+        </header>
+        <nav>
+            <ul>
+                <li><a href="goal.html">Goal</a></li>
+                <li><a href="tech.html">Tech</a></li>
+                <li><a href="expect.html">Expect</a></li>
+                <li><a href="to_racers.html">To Racers</a></li>
+                <li><a href="interests.html">Interests</a></li>
+            </ul>
+        </nav>
+        <div class = "paragraph">
+            <p>
+                열정적인 레이서분들이 많아서 좋은 영향을 덩달아 받을 수 있을 것 같아 너무 기대됩니다!!<br>
+                코로나 이후에 집에서 지내는 시간이 길어지면서 쳐지고 의욕도 잘 안 생겼는데,<br> AI 트랙에 참여하면서 함께 공부할 수 있는 사람들이 많아져 너무 좋아요!<br> 딱 저의 진로를 찾아서 다른 레이서분들과 함께 끝까지 달려갈 수 있기를 바랍니다!
+            </p>
+        </div>
+    </div>
+
+</body>
+<script>
+    function modeChange(self) {
+        let target = document.querySelector('body');
+        let as = document.querySelectorAll('a');
+        if (self.value == 'Dark') {
+            target.style.backgroundColor = '#7D869C';
+            target.style.color = '#FFFFFF';
+            as.forEach(a => a.style.color = '#FFFFFF');
+            self.value = 'Light';
+        } else {
+            target.style.backgroundColor = '#FFFFFF';
+            target.style.color = '#7D869C';
+            as.forEach(a => a.style.color = '#7D869C');
+            self.value = 'Dark';
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+    <title>About Eunna</title>
+</head>
+<body>
+    <div class="main-img">
+        <header>
+            <h1><a href="index.html">Welcome! I'm Eunna :)</a></h1>
+            <input type="button" value="Dark" class="modeChangeBtn" onclick="
+                modeChange(this);
+            ">
+        </header>
+        <nav>
+            <ul>
+                <li><a href="goal.html">Goal</a></li>
+                <li><a href="tech.html">Tech</a></li>
+                <li><a href="expect.html">Expect</a></li>
+                <li><a href="to_racers.html">To Racers</a></li>
+                <li><a href="interests.html">Interests</a></li>
+            </ul>
+        </nav>
+
+        <div class = "paragraph">
+            <p>
+                저는 제가 원하는 직무를 빨리 찾아서 개발자로서 입문하는 것이 목표입니다!<br>
+                현재는 웹 프론트엔드에 관심을 가지고 공부중입니다.<br>
+                트랙을 끝까지 완주하여 인공지능 서비스를 접목한 프로젝트를 진행해보고 싶습니다.
+            </p>
+        </div>
+    </div>
+
+</body>
+<script>
+    function modeChange(self) {
+        let target = document.querySelector('body');
+        let as = document.querySelectorAll('a');
+        if (self.value == 'Dark') {
+            target.style.backgroundColor = '#7D869C';
+            target.style.color = '#FFFFFF';
+            as.forEach(a => a.style.color = '#FFFFFF');
+            self.value = 'Light';
+        } else {
+            target.style.backgroundColor = '#FFFFFF';
+            target.style.color = '#7D869C';
+            as.forEach(a => a.style.color = '#7D869C');
+            self.value = 'Dark';
+        }
+    }
+</script>
+</html>
