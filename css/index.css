@@ -21,7 +21,7 @@ a {
 }
 
 body > .main-img {
-    background: 10% url("/images/background_img.jpg");
+    background: 10% url("https://images.unsplash.com/photo-1521489871110-81dc5a61dbda?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2128&q=80");
     position: absolute;
     size: 1000px;
     width: 100%;
